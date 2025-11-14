@@ -1,5 +1,4 @@
-const Router = require('express');
-const router = new Router();
+const router = require('express').Router();
 
 router.post('/registration', (req, res) => {
   res.json({ message: 'all working' });
@@ -9,6 +8,7 @@ router.post('/login', (req, res) => {
 });
 router.get('/auth', (req, res) => {
   res.json({ message: 'all working' });
+  console.log('im here');
 });
 
 module.exports = router;

@@ -1,5 +1,4 @@
-const Router = require('express');
-const router = new Router();
+const router = require('express').Router();
 
 router.post('/', (req, res) => {
   res.json({ message: 'all working' });
