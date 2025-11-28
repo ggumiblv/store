@@ -1,10 +1,7 @@
 const router = require('express').Router();
+const TypeController = require('../controllers/typeController');
 
-router.post('/', (req, res) => {
-  res.json({ message: 'all working' });
-});
-router.get('/', (req, res) => {
-  res.json({ message: 'all working' });
-});
+router.post('/', TypeController.create);
+router.get('/', TypeController.getAll);
 
 module.exports = router;

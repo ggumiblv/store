@@ -1,13 +1,8 @@
 const router = require('express').Router();
+const DeviceController = require('../controllers/deviceController');
 
-router.post('/', (req, res) => {
-  res.json({ message: 'all working' });
-});
-router.get('/', (req, res) => {
-  res.json({ message: 'all working' });
-});
-router.get('/:id', (req, res) => {
-  res.json({ message: 'all working' });
-});
+router.post('/', DeviceController.create);
+router.get('/', DeviceController.getAll);
+router.get('/:id', DeviceController.getOne);
 
 module.exports = router;
