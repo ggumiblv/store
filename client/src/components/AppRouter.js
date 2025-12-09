@@ -1,12 +1,13 @@
-import { Routes, Route } from 'react-router-dom';
 import { authRoutes, publicRoutes } from '../routes';
+import { Routes, Route } from 'react-router-dom';
+
+import UserStore from '../store/UserStore';
 
 const AppRouter = () => {
-  const isAuth = false;
   return (
     <div>
       <Routes>
-        {isAuth === true &&
+        {UserStore.isAuth === true &&
           authRoutes.map((route) => (
             <Route key={route.path} path={route.path} element={<route.Component />} />
           ))}
