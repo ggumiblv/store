@@ -1,5 +1,7 @@
 import { makeAutoObservable } from 'mobx';
 
+import phoneImage from '../assets/pink.jpeg';
+
 class DeviceStore {
   constructor() {
     this._types = [
@@ -11,33 +13,61 @@ class DeviceStore {
     this._brands = [
       { id: 1, name: 'Samsung' },
       { id: 2, name: 'Apple' },
-      { id: 1, name: 'Lenovo' },
-      { id: 2, name: 'Asus' }
+      { id: 3, name: 'Lenovo' },
+      { id: 4, name: 'Asus' }
     ];
     this._devices = [
       {
         id: 1,
-        name: 'Iphone 13',
+        name: 'Iphone 11',
         price: 25000,
-        img: 'https://niceapplespb.ru/wp-content/uploads/2022/03/pink_1.jpeg'
+        img: phoneImage,
+        description: [
+          { id: 1, title: 'Оперативная память', description: '5 гб' },
+          { id: 2, title: 'Камера', description: '12 мп' },
+          { id: 3, title: 'Процессор', description: 'Пентиум 3' },
+          { id: 4, title: 'Количество ядер', description: '2' },
+          { id: 5, title: 'Аккумулятор', description: '4000' }
+        ]
       },
       {
         id: 2,
-        name: 'Iphone 13',
+        name: 'Iphone 12',
         price: 25000,
-        img: 'https://niceapplespb.ru/wp-content/uploads/2022/03/pink_1.jpeg'
+        img: phoneImage,
+        description: [
+          { id: 1, title: 'Оперативная память', description: '5 гб' },
+          { id: 2, title: 'Камера', description: '12 мп' },
+          { id: 3, title: 'Процессор', description: 'Пентиум 3' },
+          { id: 4, title: 'Количество ядер', description: '2' },
+          { id: 5, title: 'Аккумулятор', description: '4000' }
+        ]
       },
       {
         id: 3,
         name: 'Iphone 13',
         price: 25000,
-        img: 'https://niceapplespb.ru/wp-content/uploads/2022/03/pink_1.jpeg'
+        img: phoneImage,
+        description: [
+          { id: 1, title: 'Оперативная память', description: '5 гб' },
+          { id: 2, title: 'Камера', description: '12 мп' },
+          { id: 3, title: 'Процессор', description: 'Пентиум 3' },
+          { id: 4, title: 'Количество ядер', description: '2' },
+          { id: 5, title: 'Аккумулятор', description: '4000' }
+        ]
       },
       {
         id: 4,
-        name: 'Iphone 13',
+        name: 'Iphone 14',
         price: 25000,
-        img: 'https://niceapplespb.ru/wp-content/uploads/2022/03/pink_1.jpeg'
+        img: phoneImage,
+        description: [
+          { id: 1, title: 'Оперативная память', description: '5 гб' },
+          { id: 2, title: 'Камера', description: '12 мп' },
+          { id: 3, title: 'Процессор', description: 'Пентиум 3' },
+          { id: 4, title: 'Количество ядер', description: '2' },
+          { id: 5, title: 'Аккумулятор', description: '4000' }
+        ]
       }
     ];
     this._selectedType = {};
