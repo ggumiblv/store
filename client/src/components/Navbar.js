@@ -7,6 +7,11 @@ import { observer } from 'mobx-react-lite';
 const Navbar = observer(() => {
   const navigate = useNavigate();
 
+  const logOut = () => {
+    UserStore.setIsAuth(false);
+    UserStore.setUser({});
+  };
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -33,7 +38,7 @@ const Navbar = observer(() => {
                 </a>
               </li>
               <li className="nav-item">
-                <button className="nav-link" onClick={() => UserStore.setIsAuth(false)}>
+                <button className="nav-link" onClick={() => logOut()}>
                   Выйти
                 </button>
               </li>
@@ -43,7 +48,6 @@ const Navbar = observer(() => {
               <li className="nav-item">
                 <button
                   onClick={() => {
-                    UserStore.setIsAuth(true);
                     navigate(LOGIN_ROUTE);
                   }}
                   className="nav-link"

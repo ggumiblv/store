@@ -1,12 +1,12 @@
 import deviceStore from '../store/DeviceStore';
 import { observer } from 'mobx-react-lite';
 
-const BrandBar = observer(() => {
+const BrandBar = () => {
   return (
-    <ul class="list-group list-group-horizontal d-flex flex-wrap">
+    <ul className="list-group list-group-horizontal d-flex flex-wrap">
       {deviceStore.brands.map((brand) => (
         <li
-          class={`list-group-item flex-fill ${
+          className={`list-group-item flex-fill ${
             brand.id === deviceStore.selectedBrand.id ? 'list-group-item-secondary' : ''
           }`}
           style={{ cursor: 'pointer' }}
@@ -18,6 +18,6 @@ const BrandBar = observer(() => {
       ))}
     </ul>
   );
-});
+};
 
-export default BrandBar;
+export default observer(BrandBar);
